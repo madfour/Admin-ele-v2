@@ -1,6 +1,6 @@
-const path = require('path')
-function resolve (dir) {
-  return path.join(__dirname, dir) // path.join()方法会将所有给定的 path 片段连接到一起，然后规范化生成的路径。
+const path = require('path');
+function resolve(dir) {
+  return path.join(__dirname, dir); // path.join()方法会将所有给定的 path 片段连接到一起，然后规范化生成的路径。
 }
 
 module.exports = {
@@ -17,8 +17,8 @@ module.exports = {
     hotOnly: false
   },
 
-  chainWebpack (config) {
+  chainWebpack(config) {
     config.resolve.alias
-      .set('@', resolve('src'))
+      .set('@', resolve('src'));
   }
-}
+};
