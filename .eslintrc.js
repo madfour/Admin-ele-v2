@@ -13,15 +13,15 @@ module.exports = {
   // required to lint *.vue files
   plugins: ['vue'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     indent: ['error', 2, { SwitchCase: 1 }],
     semi: ['error', 'always'],
-    'space-before-function-paren': [
-      'error',
-      { anonymous: 'always', named: 'never' }
-    ],
-    'generator-star-spacing': 'off',
+    'space-before-function-paren': [2, 'never'],
+    'generator-star-spacing': [2, {
+      'before': true,
+      'after': true
+    }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-console': 'off',
   }
 }
